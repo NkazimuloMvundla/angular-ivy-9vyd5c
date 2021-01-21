@@ -3,7 +3,7 @@ import { GetDataService } from "../get-data.service";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"]
+  styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
   constructor(private _getData: GetDataService) {}
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   correct_answer: number = 0;
 
   ngOnInit() {
-    this._getData.greet().subscribe(data => {
+    this._getData.greet().subscribe((data) => {
       const { results } = data;
 
       this.result = results;
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
 
   alertScore(num: number) {
     if (num == 9) {
-      alert(" You gotd " + this.correct_answer + " out of 10 ");
+      alert(" You got " + this.correct_answer + " out of 10 ");
       window.location.reload();
     }
   }
