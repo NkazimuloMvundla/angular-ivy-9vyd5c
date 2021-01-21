@@ -22,7 +22,7 @@
 
 <div class="container d-flex">
   <div class="jumbotron justify-content-center">
-    <h1 class="display-4">{{ Question }}</h1>
+    <h1 class="display-4" [innerHTML]="Question"></h1>
     <h1 id="quiz_intro">
       So you think you know everything, heh ? well, click next to start the Quiz
     </h1>
@@ -38,8 +38,8 @@
           [ngClass]="{
             incorect: value == ans && value !== correct_ans
           }"
-        >
-          {{ ans }}
+        [innerHTML]="ans">
+          <!-- {{ ans }} -->
         </button>
       </div>
     </div>
