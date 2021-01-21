@@ -9,7 +9,7 @@ export class GetDataService {
 
   greet() {
     return this._http.get(
-      "https://opentdb.com/api.php?amount=10&category=21&difficulty=medium"
+      "https://opentdb.com/api.php?amount=10&category=12&difficulty=medium"
     );
   }
 }
